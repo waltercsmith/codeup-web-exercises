@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions JS HTML</title>
+</head>
+<body>
+    <h1>Functions JS HTML</h1>
+<script src="js/functions.js" ></script>
+<script>
+    function sayHello(name){
+        var message = "Hello " + name;
+        return message;
+
+    }
+
+    var helloMessage = sayHello("Walter");
+    console.log(helloMessage)
+
+    var myName = "Walter";
+    sayHello(myName);
+
+    function isTwo(num){
+        return num === 2;
+    }
+    var isTrueTwo = isTwo(2);
+    var isThree = isTwo(3);
+    var isOne = isTwo(1);
+
+    function calculateTip(x,y){
+        return x * y;
+    }
+
+
+    alert("Your bill is ready");
+
+    function calculateTip(x,y){
+        alert("Your result is " + x * y);
+        return x * y;
+    }
+
+    var userInput = prompt("The bill total is: ");
+    var userInput2 = prompt(" And what percentage would you like to tip?");
+
+    console.log("Your tip will be $" + calculateTip(userInput,userInput2));
+
+    // console.log("The tip amount: $"prompt("The bill total is: ", + " And the what percentage would you like to tip))alert("Your Bill is ready")));
+
+        function applyDiscount(price, discount){
+            // var moneyDiscount = price * discount;
+            // price - (price * discount);
+            // var newAmount = price - moneyDiscount;
+            return price - (price * discount);
+
+        }
+        applyDiscount(100,.2);
+
+
+</script>
+</body>
+</html>
