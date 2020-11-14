@@ -28,14 +28,17 @@ console.log(names[3]);
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-for(i = 0; i < 5; i++){
-        console.log(i + names)
+for(i = 0; i < names.length; i++){
+        console.log(names[i]);
 }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-
+names.forEach(function (names) {
+        console.log('My name is ' + names);
+    
+});
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -44,10 +47,26 @@ for(i = 0; i < 5; i++){
      * - second: returns the second item in the array
      * - last: returns the last item in the array
      *
+     *
      * Example:
      *  > first([1, 2, 3, 4, 5]) // returns 1
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+var newArray = ['1','2','3','4','5'];
+function first(arr) {
+    console.log(arr[0]);
+}
+    function second(arr) {
+        console.log(arr[1]);
+    }
+    function third(arr) {
+        console.log(arr[4]);
+    }
+    console.log(first(newArray));
+    console.log(second(newArray));
+    console.log(third(newArray));
+
+
 
 })();
