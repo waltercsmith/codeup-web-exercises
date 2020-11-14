@@ -55,13 +55,13 @@ names.forEach(function (names) {
      */
 var newArray = ['1','2','3','4','5'];
 function first(arr) {
-    console.log(arr[0]);
+    return arr[0];
 }
     function second(arr) {
-        console.log(arr[1]);
+        return arr[1];
     }
     function third(arr) {
-        console.log(arr[4]);
+        return arr[arr.length - 1];
     }
     console.log(first(newArray));
     console.log(second(newArray));
