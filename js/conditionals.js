@@ -137,11 +137,11 @@ function calculateTotal(luckyNumber, totalAmount) {
   }else {luckyNumber == 5
       return totalAmount - 100;
   }
-
 }
 
-
 console.log(calculateTotal(4,100));
+
+
 
 
 /**

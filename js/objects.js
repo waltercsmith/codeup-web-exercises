@@ -11,10 +11,7 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-        var person = {};
-        person.firstName = "Walter";
 
-        person.lastName = "Smith";
 
 
         var person = {
@@ -35,9 +32,9 @@
      */
 
         person.sayHello = function () {
-            console.log("Hello from " + this.firstName + " " + this.lastName);
+            return "Hello from " + this.firstName + " " + this.lastName + '!';
         }
-
+            console.log(person.sayHello());
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -58,17 +55,29 @@
         {name: 'George', amount: 320}
     ];
 
-    function shopperNeedsToPay(amount) {
-        var productAmount = 200;
-        var discount = .12
-        if (amount > productAmount ){
-            console.log("This is amount after the discount " + (amount - (discount * amount)));
-            console.log("This is the amount before the discount: " + amount);
-        } else{
-            console.log("They didn't buy anything!")
-        }
+    // function shopperNeedsToPay(amount) {
+    //     var productAmount = 200;
+    //     var discount = .12
+    //     if (amount > productAmount ){
+    //         console.log("This is amount after the discount " + (amount - (discount * amount)));
+    //         console.log("This is the amount before the discount: " + amount);
+    //     } else{
+    //         console.log("They didn't buy anything!")
+    //     }
+    //
+    // }
+    //
+    // shoppers.forEach(shopperNeedsToPay())
 
-    }
+    shoppers.forEach(function (shopper) {
+        if(shopper.amount > 200){
+           console.log("Hey, " + shopper.name + "! Your price before any discout is: $"+ shopper.amount.toFixed(2) + and that's over $200 so you get a 12% discount meaning your final total is: $' + (shopper.amount + 88).toFixed(2) + ".");
+        }else {
+            console.log(shopper.name + " Your total before was $" + shopper.amount.toFixed(2) + " Because you spent less than $200. But you will pay $" + shopper.amount.toFixed(2));
+        }
+    })
+
+
 
 
 
@@ -85,6 +94,44 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    function addBook(title, fName, lName, booksArr) {
+        var obj ={
+            title: title,
+            author: {
+                firstName: fName,
+                lastName: lName
+            }
+        };
+        booksArr.push(obj);
+        return booksArr;
+    }
+    var books = [
+        {
+            title: "The Four Agreements",
+            author: {
+                firstName: "Don Miguel",
+                lastName:  "Ruiz"
+
+            }
+        },
+        {
+            title: "The Definitive Book of Body Language",
+            author: {
+                firstName: "Alan & Barbara",
+                lastName: "Pease"
+            }
+        },
+        {
+            title: "Tao of Jeet Kun Do",
+            author: {
+                firstName: "Bruce",
+                lastName: "Lee"
+            }
+        }
+
+    ]
+
+
 
     /**
      * TODO:
@@ -110,7 +157,15 @@
      *      ---
      *      ...
      */
+        function showBookInfo(book) {
+            var str = "Title: " + book.title + "\n";
+            str = "Author: " + book.author.firstName + " " + book.author.lastName;
+            return str;
+    }
 
+    books.forEach(function (book, index){
+            console.log("Book #" + (index + 1) + "\n" + showBookInfo(book));
+    })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author

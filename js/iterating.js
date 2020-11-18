@@ -35,8 +35,8 @@ for(i = 0; i < names.length; i++){
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-names.forEach(function (names) {
-        console.log('My name is ' + names);
+names.forEach(function (name) {
+        console.log('My name is ' + name);
     
 });
     /**
@@ -55,17 +55,20 @@ names.forEach(function (names) {
      */
 var newArray = ['1','2','3','4','5'];
 function first(arr) {
-    return arr[0];
+        return arr[0];
 }
-    function second(arr) {
+         console.log(first(names));
+
+
+function second(arr) {
         return arr[1];
     }
-    function third(arr) {
+         console.log(second(names));
+
+function last(arr) {
         return arr[arr.length - 1];
     }
-    console.log(first(newArray));
-    console.log(second(newArray));
-    console.log(third(newArray));
+        console.log(last(names));
 
 
 

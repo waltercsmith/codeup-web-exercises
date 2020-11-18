@@ -41,6 +41,7 @@
 
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
+
     console.log(planets.indexOf(('Earth')));
 
 
@@ -53,4 +54,5 @@
     console.log("Sorting the planets array.");
     planets.sort();
     console.log(planets);
+
 })();
