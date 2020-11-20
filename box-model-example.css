@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+}
+#outer-box{
+    background-color: #3e8e41;
+    height: 60px;
+    width: 60px;
+}
+#inner-box{
+    background-color: indianred;
+    height: 50px;
+    width: 50px;
+    border:  solid #333333;
+}
