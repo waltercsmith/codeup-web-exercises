@@ -8,3 +8,21 @@ comment
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: crimson;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #87f3ff
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/1824169/pexels-photo-1824169.jpeg?cs=srgb&dl=pexels-marcos-araujo-1824169.jpg&fm=jpg");
+
+}
