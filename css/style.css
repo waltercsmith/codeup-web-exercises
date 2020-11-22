@@ -30,3 +30,15 @@ body {
     background-position: center;
 
 }
+
+ul{
+    list-style: circle;
+}
+
+body{
+    font-style: italic;
+}
+
+table {
+    font-style: oblique;
+}
