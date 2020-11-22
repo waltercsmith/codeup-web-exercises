@@ -24,5 +24,9 @@ body {
 
 body {
     background-image: url("https://images.pexels.com/photos/1824169/pexels-photo-1824169.jpeg?cs=srgb&dl=pexels-marcos-araujo-1824169.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    background-attachment: fixed;
+    background-position: center;
 
 }
