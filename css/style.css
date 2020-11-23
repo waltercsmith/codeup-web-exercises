@@ -42,3 +42,19 @@ body{
 table {
     font-style: oblique;
 }
+
+a:link {
+    color:red;
+}
+
+a:hover {
+    color: green;
+}
+
+a:visited {
+    color: #333333;
+}
+
+a:active {
+    color: #c7c7c7;
+}
