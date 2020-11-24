@@ -110,6 +110,18 @@ a {
     width: calc(50% - 1em);
 }
 
+.profile-items {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.profile-entry {
+    margin: .5em;
+
+}
+
+
 .media {
 
     width: 100%;
@@ -118,3 +130,17 @@ a {
     padding: .5em;
     overflow: auto;
 }
+
+.media-image {
+    max-width: 50px;
+    float: left;
+    margin-top: 1.33em;
+
+}
+
+.media-body {
+    float:left;
+    width: calc(100% - 50px);
+
+}
+
