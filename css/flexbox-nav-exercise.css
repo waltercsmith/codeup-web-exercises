@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 nav {
-    background-color: #333333;
+    background-color: #c7c7c7;
 }
 ul {
     list-style: none;
@@ -17,8 +17,9 @@ ul {
 }
 nav a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: Verdana;
+    font-weight: bold;
     display: inline-block;
     padding: 1em;
 
@@ -26,7 +27,12 @@ nav a {
 nav a:hover {
     background: #333333;
 }
-nav ul li:nth-child(4) {
+nav ul li:nth-child(6) {
 /*    justify-content: center;*/
     margin-left: auto;
+}
+nav ul li:nth-child(5) {
+    /*justify-content: center;*/
+    margin: 0 auto;
+    font-size: xx-large;
 }
