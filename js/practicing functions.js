@@ -83,7 +83,13 @@ function reverseSign(num) {
 }
 
 //TODO: Define a function named `makeUppercase` that takes in a string as the first parameter. Return the argument passed in entirely uppercased, return false if the argument is not a string. For example, `makeUppercase("test")` would return `"TEST"`.
-
+function makeUppercase(str) {
+    if(typeof str === "string" && isNaN(str)){
+        return str.toUpperCase();
+    }else {
+        return false;
+    }
+}
 
 //TODO: Define a function named `isMultiple` that takes in two `number` parameters. Return `true` if one argument is a multiple of the other, `false` otherwise. For example, `isMultiple(2, 6)` would return `true`.
 
