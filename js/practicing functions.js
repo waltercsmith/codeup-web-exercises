@@ -65,7 +65,13 @@ function sumArgs(num1,num2,num3) {
 
 
 //TODO: Define a function named truncateString that takes in a string as the first parameter and a number as the second parameter. Truncate (shorten) the string by the length based on the argument passed in. For example, truncateString("hello world",1) would return "hello worl"
-
+function truncateString(str,num) {
+    if(typeof str === "string" && parseInt(num)){
+        return str.slice(0,-num);
+    } else {
+        return false;
+    }
+}
 
 //TODO: Define a function named `reverseSign` that takes in a number as the first parameter. Reverse the sign of the argument passed in, return false if the argument is not a number. For example, `reverseSign(1)` would return `-1`.
 
