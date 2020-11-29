@@ -114,3 +114,11 @@ function canPurchase(billAmount, availableCash) {
 }
 
 //TODO: Define a function named `getInitials` that takes in two `string` parameters, `first` & `last`. Return the names combined and formatted as initials, return `false` if either parameter is invalid. For example, `getInitials("John", "Snow")` would return `"J.S."`
+function getInitials(str1,str2) {
+    if(typeof str1 === "string" && typeof str2 === "string" && isNaN(str1) && isNaN(str2)){
+        return (str1.charAt(0)) + "." + (str2.charAt(0)) + ".";
+    }
+    else {
+        return false;
+    }
+}
