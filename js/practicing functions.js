@@ -105,6 +105,12 @@ function isMultiple(num1,num2) {
 }
 
 //TODO: Define a function named `canPurchase` that takes in two `number` parameters, `billAmount` & `availableCash`. Return `true` if `availableCash` is greater than `billAmount`, `false` otherwise. For example, `canPurchase(10, 20)` would return `true`.
-
+function canPurchase(billAmount, availableCash) {
+    if (availableCash > billAmount){
+        return true;
+    } else {
+        return false;
+    }
+}
 
 //TODO: Define a function named `getInitials` that takes in two `string` parameters, `first` & `last`. Return the names combined and formatted as initials, return `false` if either parameter is invalid. For example, `getInitials("John", "Snow")` would return `"J.S."`
