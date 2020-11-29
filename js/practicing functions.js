@@ -92,7 +92,17 @@ function makeUppercase(str) {
 }
 
 //TODO: Define a function named `isMultiple` that takes in two `number` parameters. Return `true` if one argument is a multiple of the other, `false` otherwise. For example, `isMultiple(2, 6)` would return `true`.
+function isMultiple(num1,num2) {
+    if (num1 === num2){
+        return false;
+    }
+    else if (num1 % num2 === 0 || num2 % num1 === 0 ){
+        return true;
+    }else {
+        return false;
+    }
 
+}
 
 //TODO: Define a function named `canPurchase` that takes in two `number` parameters, `billAmount` & `availableCash`. Return `true` if `availableCash` is greater than `billAmount`, `false` otherwise. For example, `canPurchase(10, 20)` would return `true`.
 
