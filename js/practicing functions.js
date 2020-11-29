@@ -74,7 +74,13 @@ function truncateString(str,num) {
 }
 
 //TODO: Define a function named `reverseSign` that takes in a number as the first parameter. Reverse the sign of the argument passed in, return false if the argument is not a number. For example, `reverseSign(1)` would return `-1`.
-
+function reverseSign(num) {
+    if(parseInt(num)) {
+        return -num;
+    }else {
+        return false;
+    }
+}
 
 //TODO: Define a function named `makeUppercase` that takes in a string as the first parameter. Return the argument passed in entirely uppercased, return false if the argument is not a string. For example, `makeUppercase("test")` would return `"TEST"`.
 
