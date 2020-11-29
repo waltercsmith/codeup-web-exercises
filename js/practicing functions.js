@@ -46,7 +46,22 @@ function combineStrings(string1,string2) {
 }
 
 //TODO: Define a function named sumArgs that takes in three parameters, if they are numbers then add them together. Otherwise return false.
+function sumArgs(num1,num2,num3) {
 
+    if (isNaN(parseInt(num1)) && isNaN(parseInt(num2)) && isNaN(parseInt(num3))){
+        return NaN;
+    } else if(typeof num1 == "string" || typeof num2 == "string" || typeof num3 == "string"){
+        return false;
+    } else if (typeof num1 == "boolean" || typeof num2 == "boolean" || typeof num3 == "boolean"){
+        return false;
+    } else if (num1 === null ||  num2 === null ||  num3 === null){
+        return false;
+    } else if ( typeof num1 === "object" || typeof num2 === "object" || typeof num3 === "object"){
+        return false;
+    } else if (parseInt(num1) && parseInt(num2) && parseInt(num3)){
+        return num1 + num2 + num3;
+    }
+}
 
 
 //TODO: Define a function named truncateString that takes in a string as the first parameter and a number as the second parameter. Truncate (shorten) the string by the length based on the argument passed in. For example, truncateString("hello world",1) would return "hello worl"
