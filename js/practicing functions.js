@@ -24,10 +24,10 @@ function isOdd(num) {
 
 //TODO: Define a function named isVowel that takes in a single character and returns true if the character is a vowel. *Not including the letter 'y'
 function isVowel(vowel) {
-    if(vowel.length === 1 && vowel === 'e' || vowel === 'a' || vowel === 'i' || vowel === 'o' || vowel === 'u' || vowel === 'I'){
-        return true;
-    }else if(typeof vowel === ''){
+    if(vowel === null){
         return false;
+    }else if(vowel.length === 1 && vowel === 'e' || vowel === 'a' || vowel === 'i' || vowel === 'o' || vowel === 'u' || vowel === 'I'){
+        return true;
     }
     else {
         return false;
@@ -36,7 +36,14 @@ function isVowel(vowel) {
 }
 
 //TODO: Define a function named combineStrings that takes in two parameters, if both parameters are strings, then return a concatenated string of both parameters. Otherwise, return false.
+function combineStrings(string1,string2) {
+    if(typeof string1=== 'string' && typeof string2 === 'string'){
+        return string1 + string2;
+    }else {
+        return false;
+    }
 
+}
 
 //TODO: Define a function named sumArgs that takes in three parameters, if they are numbers then add them together. Otherwise return false.
 
