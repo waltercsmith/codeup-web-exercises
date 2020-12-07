@@ -6,22 +6,27 @@
 </head>
 <body>
 
-<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<h2 id="message">This BOM will self destruct in <span id="timer">100</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
 
 <script>
 (function() {
     "use strict";
 
-    var detonationTimer = 5;
+    var detonationTimer = 6;
     //Added a variable for every 1 second
-    var interval = 1000;
+    // var interval = 1000;
 
     // TODO: This function needs to be called once every second
     function updateTimer() {
-        if (detonationTimer == 0) {
+        if(detonationTimer === 5){
+
+            alert(('GOTCHA!!!'), detonationTimer - 4);
+        }
+        else if (detonationTimer == 0) {
             alert('EXTERMINATE!');
-            document.body.innerHTML = '';
+            document.body.innerHTML = 'EXPLOSION!!!!';
+
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
