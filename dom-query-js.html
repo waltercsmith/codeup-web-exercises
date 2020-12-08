@@ -56,36 +56,69 @@
         var listener = function (event){
             alert(mainHeader.innerHTML);
         }
-
-        var btn1 = document.getElementById('btn1');
-        btn1.addEventListener('click', listener);
-
-
-        var listener2 = function (event){
-            alert(heading2Tag.innerHTML);
-        }
-
-        var btn2 = document.getElementById('btn2');
-        btn2.addEventListener('click', listener2);
+        var button1 = document.getElementById("btn1");
+        var button2 = document.getElementById("btn2");
+        var button3 = document.getElementById("btn3");
+        var button4 = document.getElementById("btn4");
 
 
+        button1.addEventListener("click",function () {
+            mainHeader.innerHTML = "JavaScript is Cool"
+        })
 
-        var listener3 = function (event){
-            alert(listItemNumberOne.innerHTML);
-        }
-
-        var btn3 = document.getElementById('btn3');
-        btn3.addEventListener('click', listener3);
-
-
+        button2.addEventListener("click", function () {
+            subHeader.style.color = "blue";
+        })
 
 
-        var listener4 = function (event){
-            alert(subParagraphs.innerHTML);
-        }
+        button3.addEventListener("click", function () {
+            if (i % 2 !== 0){
+                listItems[i].style.color = "grey";}
 
-        var btn4 = document.getElementById('btn4');
-        btn4.addEventListener('click', listener4);
+            var dbId = listItems[i].getAttribute("data-dbid");
+            console.log(dbId);
+
+            if (dbId === "1"){
+                listItems[i].style.color = "blue";
+            }
+
+        })
+
+
+        button4.addEventListener("click", function () {
+            subParagraphs[0].innerText = 'Mission Accomplished';
+
+        })
+
+        // var btn1 = document.getElementById('btn1');
+        // btn1.addEventListener('click', listener);
+        //
+        //
+        // var listener2 = function (event){
+        //     alert(heading2Tag.innerHTML);
+        // }
+        //
+        // var btn2 = document.getElementById('btn2');
+        // btn2.addEventListener('click', listener2);
+        //
+        //
+        //
+        // var listener3 = function (event){
+        //     alert(listItemNumberOne.innerHTML);
+        // }
+        //
+        // var btn3 = document.getElementById('btn3');
+        // btn3.addEventListener('click', listener3);
+        //
+        //
+        //
+        //
+        // var listener4 = function (event){
+        //     alert(subParagraphs.innerHTML);
+        // }
+        //
+        // var btn4 = document.getElementById('btn4');
+        // btn4.addEventListener('click', listener4);
 
 
 
