@@ -48,7 +48,45 @@
         }
 
         // TODO: Set text color on every other list item to grey
+            var listItemOther = document.getElementsByTagName("li")[1];
+            listItemOther.style.color = '#254';
+            var listItemOther2 = document.getElementsByTagName("li")[3];
+            listItemOther2.style.color = '#264';
+        // */ Was able to list every other list item separately with a different color
+        //     but still need to make a function that catches all
+
+
+        // (function everyOtherGreyItem() {
+        //         var listItems = document.getElementsByTagName('li')[0];
+        //     for(var i = 1; i < listItems.length; i++){
+        //         if(listItems.length % 2 === 0){
+        //             listItems.style.color = '#00FF40';
+        //         }
+        //         console.log(listItems);
+        //         console.log(listItems.length);
+        //         listItems.style.color = '#444';
+
+            //     }
+            // })();
         // TODO: Set text color of li with dbid = 1 to blue
+            var listItemNumberOne = document.getElementsByTagName("li")[0];
+            listItemNumberOne.style.color = '#00f'
+
+        // Need to create function probably an if statement to fulfill this requirement
+
+
+        // function colorText() {
+        //     let listItems = document.getElementsByTagName('li');
+        //     for(var i = 0; i < listItems.length; i++){
+        //         if(listItems.length % 2 === 0){
+        //             return listItems.style.color = 'grey';
+        //         } else if (listItems[0]){
+        //             return listItems[0].style.color = 'blue';
+        //         }   else{
+        //             return listItems.style.color = 'black';
+        //         }
+        //     }
+        // }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = ;
