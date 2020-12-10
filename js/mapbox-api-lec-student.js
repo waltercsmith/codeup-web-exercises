@@ -36,6 +36,8 @@ var map = new mapboxgl.Map({
 
 
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4916, 29.4260]. This marker will mark the Alamo on our map.
+
+
 var marker = new mapboxgl.Marker({
     color: '#8d09b1',
     draggable:true,
@@ -43,6 +45,8 @@ var marker = new mapboxgl.Marker({
     .setLngLat([-98.4916, 29.4260])
 
     .addTo(map);
+
+
 // TODO TOGETHER: Change the color of the marker
 //Changed the color of the marker
 
@@ -59,17 +63,25 @@ var marker = new mapboxgl.Marker({
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
-
-var popup = new mapboxgl.Popup()
-    .setLngLat([-98.48953338691301,29.42700060876315])
-    .setHTML("<p>Codeup Rocks!</p>")
-    .addTo(map);
+//
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.48953338691301, 29.42700060876315])
+//     .setHTML("<p>Codeup Rocks!</p>")
+//     .addTo(map);
 
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
 
+// var alamoPopup = new mapboxgl.Popup()
+//     .setHTML("<p>Remember the Alamo!</p>")
+//         .addTo(map);
+// marker.setPopup(alamoPopup);
+
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
+
+
+
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
 
 
@@ -79,13 +91,52 @@ var popup = new mapboxgl.Popup()
  *********************************************/
 // Geocoding Docs --> https://docs.mapbox.com/api/search/#geocoding
 
+let searchString = prompt("Choose an location:");
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
+geocode(searchString, mapboxToken).then(function (result){
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(5);
+    marker.setLngLat(result);
+
+})
 
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
+
+var marker2 = new mapboxgl.Marker({
+    color: '#098ab1',
+    draggable:true,
+})
+    .setLngLat([-80.21158038916252, 26.05107633186713])
+
+    .addTo(map);
+
+
 //TODO: Instead of setCenter try using map.jumpTo()
+
+geocode(searchString,mapboxToken).then(function (result) {
+
+    map.jumpTo({
+        center: [0, 0],
+        zoom: 8,
+    })
+        .setLngLat([-98.4916, 29.4260])
+
+        .addTo(map);
+})
+
 //TODO: Instead of setCenter try using map.flyTo()
+// geocode(searchString,mapboxToken).then(function (result){
+// map.flyTo({
+//     zoom: 8,
+// })
+//     .setLngLat([-98.4916, 29.4260])
+//
+//     .addTo(map);
+// })
+
 
 
 
