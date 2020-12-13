@@ -16,6 +16,12 @@ h1 {
 
 }
 
+
+img {
+    width: 5px;
+    height: 5px;
+}
+
 /*input [type="radio"] {*/
 /*    text-indent: 50px;*/
 /*}*/
