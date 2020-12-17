@@ -5,20 +5,28 @@
     <title>JQuery Exercise</title>
 </head>
 <body>
-        <h1>Kon'nichiwa</h1>
-            <p>
+        <h1 id="header-1">Kon'nichiwa</h1>
+            <p id="japanese-word">
                 The above word is the 'hello' greeting in Japanese.
             </p>
     <div>
-        <h2>
+        <h2 id="header-2">
             The list below are a few places that are quite popular in Japan
         </h2>
     </div>
-                <ul>
-                        <li>Tokyo</li>
-                        <li>Osaka</li>
-                        <li>Mt.Fuji</li>
+                <ul id="popular-places">
+                        <li id="tokyo">Tokyo</li>
+                        <li id="osaka">Osaka</li>
+                        <li id="fuji">Mt.Fuji</li>
                 </ul>
+    <div>
+        <p id="sushi">
+            Sushi is quite delicious!
+        </p>
+    </div>
+        <h3 id="smaller-header">
+            And another smaller header
+        </h3>
 
 <script  src="js/jquery-2.2.4.js"></script>
 <script type="text/javascript">
@@ -26,6 +34,21 @@
     $(document).ready(function () {
         alert("The window documnet is completely ready!")
     })
+
+    // Use jQuery to select an element by the id. Alert the contents of the element.
+    var callHeaderOne = $("#header-1").html();
+    alert(callHeaderOne)
+
+    // Update the jQuery code to select and alert a different id.
+    var listOfPlaces = $("#popular-places").html();
+    alert(listOfPlaces)
+
+    // Use the same id on 2 elements.
+    // Can not use same id on 2 elements causes a conflict
+
+
+
+
 </script>
 </body>
 </html>
