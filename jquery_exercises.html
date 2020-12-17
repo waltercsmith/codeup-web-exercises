@@ -51,7 +51,7 @@
 <!--            And another smaller header-->
 <!--        </h3>-->
 
-        <h1  >Kon'nichiwa</h1>
+        <h1 class="important">Kon'nichiwa</h1>
         <p >
             The above word is the 'hello' greeting in Japanese.
         </p>
@@ -61,12 +61,12 @@
             </h2>
         </div>
         <ul >
-            <li>Tokyo</li>
+            <li class="important">Tokyo</li>
             <li>Osaka</li>
             <li>Mt.Fuji</li>
         </ul>
         <div>
-            <p>
+            <p class="important">
                 Sushi is quite delicious!
             </p>
         </div>
@@ -117,6 +117,9 @@
     var hOneAlertStatement  = $("h1").html("hello");
     alert(hOneAlertStatement)
 
+    // Combine your selectors that highlight all the h1, p, and li elements.
+
+    $(".important, p, h1, li ").css("color", "pink")
 </script>
 </body>
 </html>
