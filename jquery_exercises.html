@@ -28,7 +28,30 @@
 <!--            And another smaller header-->
 <!--        </h3>-->
 
-        <h1 class="codeup" >Kon'nichiwa</h1>
+<!--        <h1 class="codeup" >Kon'nichiwa</h1>-->
+<!--        <p >-->
+<!--            The above word is the 'hello' greeting in Japanese.-->
+<!--        </p>-->
+<!--        <div>-->
+<!--            <h2>-->
+<!--                The list below are a few places that are quite popular in Japan-->
+<!--            </h2>-->
+<!--        </div>-->
+<!--        <ul class="codeup">-->
+<!--            <li>Tokyo</li>-->
+<!--            <li>Osaka</li>-->
+<!--            <li>Mt.Fuji</li>-->
+<!--        </ul>-->
+<!--        <div>-->
+<!--            <p>-->
+<!--                Sushi is quite delicious!-->
+<!--            </p>-->
+<!--        </div>-->
+<!--        <h3 class="codeup">-->
+<!--            And another smaller header-->
+<!--        </h3>-->
+
+        <h1  >Kon'nichiwa</h1>
         <p >
             The above word is the 'hello' greeting in Japanese.
         </p>
@@ -37,7 +60,7 @@
                 The list below are a few places that are quite popular in Japan
             </h2>
         </div>
-        <ul class="codeup">
+        <ul >
             <li>Tokyo</li>
             <li>Osaka</li>
             <li>Mt.Fuji</li>
@@ -47,7 +70,7 @@
                 Sushi is quite delicious!
             </p>
         </div>
-        <h3 class="codeup">
+        <h3>
             And another smaller header
         </h3>
 
@@ -81,7 +104,18 @@
     // Gave another element an id of codeup.
     //ul
 
+    // Removed your custom jQuery code from previous exercises.
+    // Using jQuery, set the font-size of all li elements to 20px.
+    $("li").css("font-size", "20px")
 
+    // Craft selectors that highlight all the h1, p, and li elements.
+    $("h1").css("background-color", "yellow")
+    $("p").css("background-color", "blue")
+    $("li").css("background-color", "purple")
+
+    // Create a jQuery statement to alert the contents of your h1 element(s)
+    var hOneAlertStatement  = $("h1").html("hello");
+    alert(hOneAlertStatement)
 
 </script>
 </body>
