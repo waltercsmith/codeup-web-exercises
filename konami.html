@@ -80,13 +80,22 @@
 //
 //         // if the last key is reached, activate cheats
                 if (konamiCodePosition == konamiCode.length) {
-                    alert("you got it");
+                    cheatActivated();
                     konamiCodePosition = 0;
                 }
             } else {
                 konamiCodePosition = 0;
             }
         });
+
+
+        function cheatActivated() {
+            alert("You activated a cheat!");
+            document.body.style.backgroundColor = 'blue';
+            document.body.
+
+        }
+
 
 
 
