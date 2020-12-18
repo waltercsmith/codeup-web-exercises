@@ -97,7 +97,7 @@
 
     //Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red
 
-    $(".codeup").css("border", "1px solid red",)
+    // $(".codeup").css("border", "1px solid red",)
 
     // Removed the class from one of the elements. Refresh and test that the border has been removed.
         // h2
@@ -106,20 +106,36 @@
 
     // Removed your custom jQuery code from previous exercises.
     // Using jQuery, set the font-size of all li elements to 20px.
-    $("li").css("font-size", "20px")
+    // $("li").css("font-size", "20px")
 
     // Craft selectors that highlight all the h1, p, and li elements.
-    $("h1").css("background-color", "yellow")
-    $("p").css("background-color", "blue")
-    $("li").css("background-color", "purple")
+    // $("h1").css("background-color", "yellow")
+    // $("p").css("background-color", "blue")
+    // $("li").css("background-color", "purple")
 
     // Create a jQuery statement to alert the contents of your h1 element(s)
-    var hOneAlertStatement  = $("h1").html("hello");
-    alert(hOneAlertStatement)
+    // var hOneAlertStatement  = $("h1").html("hello");
+    // alert(hOneAlertStatement)
 
     // Combine your selectors that highlight all the h1, p, and li elements.
 
-    $(" p, h1, li ").css("color", "pink")
+    // $(" p, h1, li ").css("color", "pink")
+
+    //
+    // The Keyboard Event Exercises below:
+    //
+
+    // 1. Remove your custom jQuery code from previous exercises
+    //Removed
+
+    // 2.Add jQuery code that will change the background color of an h1 element when clicked.
+    $(".important").click(
+        function () {
+            $(this).css('background-color','blue');
+        }
+    )
+
+
 </script>
 </body>
 </html>
