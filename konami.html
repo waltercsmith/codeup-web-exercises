@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
 </head>
 <body>
-$END$
+    <h1>Konami Code</h1>
+
+
+
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        // "use strict";
+        //
+        // $(document).keyup(function (event) {
+        //     console.log(event.keyCode);
+        // });
+        //
+        // var allowedKeys = {
+        //     13: 'enter',
+        //     37: 'left',
+        //     38: 'up',
+        //     39: 'right',
+        //     40: 'down',
+        //     65: 'a',
+        //     66: 'b'
+        // };
+        //
+        // var konamiCode = ['up','up','down','down','left','right','left', 'right', 'b','a','enter'];
+        //
+        // var konamiCodePosition = 0;
+        //
+        //
+        // document.addEventListener('keydown',function (e) {
+        //     var key = konamiCode[e.keyCode]
+        //     var requiredKey = konamiCode[konamiCodePosition];
+        //     if(requiredKey = key){
+        //         konamiCodePosition++;
+        //     } if (konamiCodePosition = konamiCode.length){
+        //         alert("You got 30 lives!")
+        //         konamiCodePosition = 0;
+        //     }else {
+        //         konamiCodePosition = 0;
+        //     }
+        // });
+
+
+        "use strict";
+        $(document).keyup(function(event) {
+            console.log(event.keyCode);
+        });
+        var allowedKeys = {
+            37: 'left',
+            38: 'up',
+            39: 'right',
+            40: 'down',
+            66: 'b',
+            65: 'a',
+            13: 'enter'
+        };
+        // Konami Code sequence
+        var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a','enter'];
+        // // a variable to remember the 'position' the user has reached so far.
+        var konamiCodePosition = 0;
+        //
+        // // add keydown event listener
+        document.addEventListener('keydown', function(e) {
+//     // get the value of the key code from the key map
+            var key = allowedKeys[e.keyCode];
+//     // get the value of the required key from the konami code
+            var requiredKey = konamiCode[konamiCodePosition];
+//
+//     // compare the key with the required key
+            if (key == requiredKey) {
+//
+//         // move to the next key in the konami code sequence
+                konamiCodePosition++;
+//
+//         // if the last key is reached, activate cheats
+                if (konamiCodePosition == konamiCode.length) {
+                    alert("you got it");
+                    konamiCodePosition = 0;
+                }
+            } else {
+                konamiCodePosition = 0;
+            }
+        });
+
+
+
+
+    </script>
 </body>
 </html>
