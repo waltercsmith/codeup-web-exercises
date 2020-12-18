@@ -51,7 +51,7 @@
 <!--            And another smaller header-->
 <!--        </h3>-->
 
-        <h1 class="important">Kon'nichiwa</h1>
+        <h1 class="important" id="header-one">Kon'nichiwa</h1>
         <p >
             The above word is the 'hello' greeting in Japanese.
         </p>
@@ -129,10 +129,29 @@
     //Removed
 
     // 2.Add jQuery code that will change the background color of an h1 element when clicked.
-    $(".important").click(
+    $("#header-one").click(
         function () {
             $(this).css('background-color','blue');
         }
+    )
+
+    // 3. Make all paragraphs have a font size of 18px when they are double clicked
+    $("p").dblclick(
+        function () {
+            $(this).css('font-size', '18px');
+        }
+    )
+    //For the number 3 task I had to give the h1 tag an id because h1 tag shared the same class as a li tag and an p tag
+
+    // 4. Set all li text color to red when the mouse is hovering; reset to black when it is not
+    $("li").hover(
+        function () {
+            $(this).css('color', 'red');
+        },
+        function () {
+            $(this).css('color', 'black');
+        }
+
     )
 
 
