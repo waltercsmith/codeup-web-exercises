@@ -6,6 +6,8 @@
     <style>
         .invisible {
             visibility: hidden;
+            color: #8a4182;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -13,23 +15,28 @@
 
         <dl>
             <dt>Yellow Stone National Park</dt>
-            <dd>Who is the director of the National Park Service?</dd>
-            <dd>TWhat government agency oversees the National Park Service?</dd>
-            <dd>How many people visit the national parks?</dd>
-            <dd>What is the National Park Service budget?</dd>
-            <dd>Where can I find a park map?</dd>
-            <dd>What do I need to know about driving off road in national parks?</dd>
-            <dd>Can I bring my pet to a national park?</dd>
-            <dd>How do I make reservations for camping/lodging in national parks?</dd>
-            <dd>How do I obtain a park entrance pass?</dd>
-            <dd>What is the origin of the National Park Service arrowhead?</dd>
+            <dd class="invisible">Who is the director of the National Park Service?</dd>
+            <dd class="invisible">TWhat government agency oversees the National Park Service?</dd>
+            <dd class="invisible">How many people visit the national parks?</dd>
+            <dd class="invisible">What is the National Park Service budget?</dd>
+            <dd class="invisible">Where can I find a park map?</dd>
+            <dd class="invisible">What do I need to know about driving off road in national parks?</dd>
+            <dd class="invisible">Can I bring my pet to a national park?</dd>
+            <dd class="invisible">How do I make reservations for camping/lodging in national parks?</dd>
+            <dd class="invisible">How do I obtain a park entrance pass?</dd>
+            <dd class="invisible">What is the origin of the National Park Service arrowhead?</dd>
         </dl>
+        <button id="btn" data-id="1" type="button" class="btn btn-default">Just a Button</button>
     <script src="js/jquery-2.2.4.js"></script>
     <script>
         "use strict"
 
         $(document).ready(function () {
-            $('dd').addClass('invisible');
+          $("#btn").click(function (event) {
+              event.preventDefault();
+              $("dd").toggleClass("invisible");
+
+          })
         })
 
     </script>
