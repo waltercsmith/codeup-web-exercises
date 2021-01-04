@@ -11,8 +11,10 @@
         dd {
             color: #8a4182;
             font-size: 30px;
-
         }
+
+        .highlighted {background-color: #50d6ff}
+        .highlighted2 {background-color: gold}
     </style>
 </head>
 <body>
@@ -39,6 +41,9 @@
           $("#btn").click(function (event) {
               event.preventDefault();
               $("dd").toggleClass("invisible");
+              $("dt").click(function () {
+                  $("dt").toggleClass("highlighted2")
+              })
 
           })
         })
