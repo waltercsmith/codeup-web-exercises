@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery FAQ Definition List</title>
+    <style>
+        .font-color {
+            color: #8a4182;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,5 +24,14 @@
             <dd>How do I obtain a park entrance pass?</dd>
             <dd>What is the origin of the National Park Service arrowhead?</dd>
         </dl>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict"
+
+        $(document).ready(function () {
+            $('dd').addClass('invisible');
+        })
+
+    </script>
 </body>
 </html>
