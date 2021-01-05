@@ -109,27 +109,30 @@
             //     $(this).next().children("li").toggleClass("bold");
             // })
 
-            $("#anacostia").click(function () {
-                $("li").first().toggleClass("font-blue");
-            })
-            $("#fort").click(function () {
-                $("li").each(function (index) {
-                    if(index === 3){
-                        $(this).toggleClass("font-blue");
-                    }
-                })
-            })
-            $("#trace").click(function () {
-                $("li").each(function (index) {
-                    if (index === 6) {
-                        $(this).toggleClass("font-blue");
-                    }
-                })
-            })
+            // $("#anacostia").click(function () {
+            //     $("li").first().toggleClass("font-blue");
+            // })
+            // $("#fort").click(function () {
+            //     $("li").each(function (index) {
+            //         if(index === 3){
+            //             $(this).toggleClass("font-blue");
+            //         }
+            //     })
+            // })
+            // $("#trace").click(function () {
+            //     $("li").each(function (index) {
+            //         if (index === 6) {
+            //             $(this).toggleClass("font-blue");
+            //         }
+            //     })
+            // })
             $("span").click(function () {
                 $("h1").parent().hide().delay(2000).show(3000);
             })
                 $("h3").next().children().hide();
+                $("h3").click(function () {
+                    $(this).next().children().toggle();
+                })
 
         })
 
