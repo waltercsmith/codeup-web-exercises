@@ -33,6 +33,8 @@
             width: 200px;
         }
 
+
+
     </style>
 </head>
 <body>
@@ -103,9 +105,9 @@
                     }
                 });
         })
-            $("h3").click(function () {
-                $(this).next().children("li").toggleClass("bold");
-            })
+            // $("h3").click(function () {
+            //     $(this).next().children("li").toggleClass("bold");
+            // })
 
             $("#anacostia").click(function () {
                 $("li").first().toggleClass("font-blue");
@@ -127,6 +129,8 @@
             $("span").click(function () {
                 $("h1").parent().hide().delay(2000).show(3000);
             })
+                $("h3").next().children().hide();
+
         })
 
 
