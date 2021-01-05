@@ -13,18 +13,35 @@
             font-size: 30px;
         }
 
-        /*.highlighted {background-color: #50d6ff}*/
+        .highlighted {background-color: #e7e300
+        }
         .highlighted2 {background-color: gold}
+        .bold {font-weight: bolder}
+        .font-blue{color: blue}
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border: solid 3px black;
+            height: 200px;
+            width: 200px;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
     </style>
 </head>
 <body>
-<!--        <ul>-->
-<!--            <li>Linux</li>-->
-<!--            <li>Apache</li>-->
-<!--            <li>MySQL</li>-->
-<!--            <li>PHP</li>-->
-<!--            <li>Javascript</li>-->
-<!--        </ul>-->
+
+    <div>
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>x</span>
+    </div>
+
         <dl>
             <dt>Yellow Stone National Park</dt>
             <dd class="invisible">Who is the director of the National Park Service?</dd>
@@ -39,6 +56,33 @@
             <dd class="invisible">What is the origin of the National Park Service arrowhead?</dd>
         </dl>
         <button id="btn" data-id="1" type="button" class="btn btn-default">Just a Button</button>
+
+    <h3>Anacostia Park</h3>
+        <ul id="anacostia">
+            <li>Dawn and dusk are the best times for wildlife sightings</li>
+            <li>Home to osprey, bald eagles, songbirds, and waterfowl</li>
+            <li>An abundance of plant life thrives alongside the Anacostia River</li>
+        </ul>
+
+    <h3>Fort Dupont</h3>
+        <ul id="fort">
+            <li>Scattered with a wide variety of trees, shrubs and other plants</li>
+            <li>Some of the animals that might be found while walking the trails<br> are Whitetail deer, Possums, Black Snakes, Eastern Box turtle,<br> Wild turkeys, Pileated Woodpecker, and Red-shouldered Hawks</li>
+            <li>In late spring (May-June) Mountain Laurels are in full bloom<br> and perfect time to get out and see the plants that are waking from their winter slumber</li>
+        </ul>
+
+    <h3>Natchez Trace Parkway</h3>
+        <ul id="trace">
+            <li>52,000 acres are maintained in a "natural" condition, i.e., forests, non-agricultural fields, and open water</li>
+            <li>Over its length it crosses four ecosystem provinces, eight major watersheds, and twelve physiographic regions</li>
+            <li>Home to over 40 different species of reptiles</li>
+        </ul>
+
+        <button id="btn2" type="button">Click Here</button>
+
+
+
+
     <script src="js/jquery-2.2.4.js"></script>
     <script>
         "use strict"
@@ -52,13 +96,40 @@
               })
 
           })
+            $("#btn2").click(function () {
+                $('li').each(function(index) {
+                    if (index % 3 === 2) {
+                        $(this).toggleClass("highlighted");
+                    }
+                });
+        })
+            $("h3").click(function () {
+                $(this).next().children("li").toggleClass("bold");
+            })
+
+            $("#anacostia").click(function () {
+                $("li").first().toggleClass("font-blue");
+            })
+            $("#fort").click(function () {
+                $("li").each(function (index) {
+                    if(index === 3){
+                        $(this).toggleClass("font-blue");
+                    }
+                })
+            })
+            $("#trace").click(function () {
+                $("li").each(function (index) {
+                    if (index === 6) {
+                        $(this).toggleClass("font-blue");
+                    }
+                })
+            })
+            $("span").click(function () {
+                $("h1").parent().hide().delay(2000).show(3000);
+            })
         })
 
-        // $('li').each(function(index) {
-        //     if (index % 2 !== 0) {
-        //         $(this).css('background-color', '#FF0');
-        //     }
-        // });
+
 
     </script>
 </body>
