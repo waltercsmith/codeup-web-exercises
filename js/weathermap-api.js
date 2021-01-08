@@ -13,7 +13,7 @@ $(document).ready(function () {
         $.each(data.list,function (index,item) {
             console.log(item)
             if (index % 8 == 0) {
-                $('#forecast').append("<tr><td>" + item.dt + '</td>' + "<td>" + item.main.temp_max + "/" + item.main.temp_min + "</td>" + "<td>" + item.main.humidity + "</td>" + "<td>" + item.main.wind + "</td>" + "<td>" + item.main.pressure)
+                $('#forecast').append("<tr><td>" + item.dt + '</td>' + "<td>" + item.main.temp_max + "/" + item.main.temp_min + "</td>" + "<td>" + item.main.humidity + "</td>" + "<td>" + item.wind.deg + "</td>" + "<td>" + item.main.pressure)
                 // $("#forecast").append("<tr><td>" + item.main.temp + "</td>" + "<td>" + item.name + "</td>" + "<td>" + item.population + "</td>" + "<td>" + item.timezone)
             }
         })
