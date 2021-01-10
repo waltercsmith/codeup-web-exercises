@@ -13,14 +13,15 @@ $(document).ready(function () {
         $.each(data.list,function (index,item) {
             console.log(item)
             if (index % 8 == 0) {
-                $('#forecast').append("<p>" + item.dt + "</p>")
+                $('.card-body').append(item.dt_txt)
                 // $('#forecast').append("<tr><td>" + item.dt + '</td>' + "<td>" + item.main.temp_max + "/" + item.main.temp_min + "</td>" + "<td>" + item.main.humidity + "</td>" + "<td>" + item.wind.deg + "</td>" + "<td>" + item.main.pressure)
                 // $("#forecast").append("<tr><td>" + item.main.temp + "</td>" + "<td>" + item.name + "</td>" + "<td>" + item.population + "</td>" + "<td>" + item.timezone)
             }
         })
         console.log('5 day forecast',data);
-    });
 
+    });
+//
         // let iconUrl = <img src="http://openweathermap.org/img/wn/' data.weather[0].icon + "02x.png"'>
 
     mapboxgl.accessToken = mapboxToken;
