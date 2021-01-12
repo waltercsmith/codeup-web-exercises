@@ -33,6 +33,8 @@ $(document).ready(function () {
 
 
 
+
+
                 // $('#forecast').append("<tr><td>" + item.dt + '</td>' + "<td>" + item.main.temp_max + "/" + item.main.temp_min + "</td>" + "<td>" + item.main.humidity + "</td>" + "<td>" + item.wind.deg + "</td>" + "<td>" + item.main.pressure)
                 // $("#forecast").append("<tr><td>" + item.main.temp + "</td>" + "<td>" + item.name + "</td>" + "<td>" + item.population + "</td>" + "<td>" + item.timezone)
             }
