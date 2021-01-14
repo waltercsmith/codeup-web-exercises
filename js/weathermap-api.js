@@ -21,22 +21,23 @@ $(document).ready(function () {
         lon:   -98.48527,
         units: "imperial"
     }).done(function (data) {
+
         console.log(data)
         $.each(data.list,function (index,item) {
-            console.log(item)
             if (index % 8 == 0) {
-                $('.card-body').find('.item-dt').append(item.dt_txt);
-                $('.card-body').find('.item-temp-max').append(item.main.temp_max);
-                $('.card-body').find('.item-humidity').append(item.main.humidity);
-                $('.card-body').find('.item-wind').append(item.wind.deg)
+                $('ul').append('<li>' + item.dt_txt + '</li>');
+                console.log(item.dt_txt);
 
 
-
-
-
-
-                // $('#forecast').append("<tr><td>" + item.dt + '</td>' + "<td>" + item.main.temp_max + "/" + item.main.temp_min + "</td>" + "<td>" + item.main.humidity + "</td>" + "<td>" + item.wind.deg + "</td>" + "<td>" + item.main.pressure)
-                // $("#forecast").append("<tr><td>" + item.main.temp + "</td>" + "<td>" + item.name + "</td>" + "<td>" + item.population + "</td>" + "<td>" + item.timezone)
+                // $('.card-body').find('.item-dt').append(item[0].dt_txt);
+                // $('.card-body').find('.item-temp-max').append(item[0].main.temp_max);
+                // $('.card-body').find('.item-humidity').append(item[0].main.humidity);
+                // $('.card-body').find('.item-wind').append(item.wind[0].deg)
+            }
+        })
+        $.each(data.list,function (index,item) {
+            if(index % 8 == 0){
+                $('ul').append('<li>' + item.main.temp_max + '/' + item.main.temp_min + '</li>');
             }
         })
         console.log('5 day forecast',data);
