@@ -25,46 +25,50 @@ var weatherData;
         weatherData = data;
         console.log(weatherData);
 
-        $("#cardOneV2").append('<p>' + weatherData.daily[0].dt + '</p>');
+
+
+        $("#cardOneV2").append('<p class="card-header">' + weatherData.daily[0].dt + '</p>' + '<br>');
         $("#cardOneV2").append('<p>' + weatherData.daily[0].temp.max + ' / ' + weatherData.daily[0].temp.min + '</p>');
-        $('#cardOneV2').append("Description: " + '<p>' + weatherData.daily[0].weather[0].description + '</p>');
-        $("#cardOneV2").append('<p>' + weatherData.daily[0].humidity + '</p>');
-        $("#cardOneV2").append('<p>' + weatherData.daily[0].wind_deg + '</p>');
-        $("#cardOneV2").append('<p>' + weatherData.daily[0].pressure + '</p>');
+        $('#cardOneV2').append("Description: " + '<p>' + '<strong>' + weatherData.daily[0].weather[0].description + '</strong>' + '</p>');
+        $("#cardOneV2").append('<p>' + 'Humidity: ' + '<strong>'+ weatherData.daily[0].humidity +'</strong>'   + '</p>');
+        $("#cardOneV2").append('<p>' + 'Wind: ' + '<strong>'+ weatherData.daily[0].wind_deg +'</strong>' + '</p>');
+        $("#cardOneV2").append('<p>' + 'Pressure: ' + '<strong>'+ weatherData.daily[0].pressure +'</strong>' + '</p>');
 
-        $("#cardTwo").append('<p>' + weatherData.daily[1].dt + '</p>');
+        $("#cardTwo").append('<p class="card-header">' + weatherData.daily[1].dt + '</p>'+ '<br>');
         $("#cardTwo").append('<p>' + weatherData.daily[1].temp.max + ' / ' + weatherData.daily[1].temp.min + '</p>');
-        $('#cardTwo').append('<p>' + weatherData.daily[1].weather[0].description + '</p>');
-        $("#cardTwo").append('<p>' + weatherData.daily[1].humidity + '</p>');
-        $("#cardTwo").append('<p>' + weatherData.daily[1].wind_deg + '</p>');
-        $("#cardTwo").append('<p>' + weatherData.daily[1].pressure + '</p>');
+        $('#cardTwo').append("Description: " +'<p>' + '<strong>' + weatherData.daily[1].weather[0].description + '</strong>' + '</p>');
+        $("#cardTwo").append('<p>' + 'Humidity: '  + '<strong>'+ weatherData.daily[1].humidity +'</strong>' + '</p>');
+        $("#cardTwo").append('<p>' + 'Wind: ' +'<strong>'+ weatherData.daily[1].wind_deg +'</strong>'+ '</p>');
+        $("#cardTwo").append('<p>' + 'Pressure: '+ '<strong>' + weatherData.daily[1].pressure + '</strong>'   + '</p>');
 
-        $("#cardThree").append('<p>' + weatherData.daily[2].dt + '</p>');
+        $("#cardThree").append('<p class="card-header">' + weatherData.daily[2].dt + '</p>'+ '<br>');
         $("#cardThree").append('<p>' + weatherData.daily[2].temp.max + ' / ' + weatherData.daily[2].temp.min + '</p>');
-        $('#cardThree').append('<p>' + weatherData.daily[2].weather[0].description + '</p>');
-        $("#cardThree").append('<p>' + weatherData.daily[2].humidity + '</p>');
-        $("#cardThree").append('<p>' + weatherData.daily[2].wind_deg + '</p>');
-        $("#cardThree").append('<p>' + weatherData.daily[2].pressure + '</p>');
+        $('#cardThree').append("Description: " +'<p>' + '<strong>' + weatherData.daily[2].weather[0].description +'</strong>' + '</p>');
+        $("#cardThree").append('<p>' + 'Humidity: '  + '<strong>'+ weatherData.daily[2].humidity+ '</strong>'  + '</p>');
+        $("#cardThree").append('<p>' + 'Wind: ' + '<strong>'+ weatherData.daily[2].wind_deg + '</strong>' + '</p>');
+        $("#cardThree").append('<p>' + 'Pressure: ' + '<strong>' + weatherData.daily[2].pressure +'</strong>' + '</p>');
 
-        $("#cardFour").append('<p>' + weatherData.daily[3].dt + '</p>');
+        $("#cardFour").append('<p class="card-header">' + weatherData.daily[3].dt + '</p>'+ '<br>');
         $("#cardFour").append('<p>' + weatherData.daily[3].temp.max + ' / ' + weatherData.daily[3].temp.min + '</p>');
-        $('#cardFour').append('<p>' + weatherData.daily[3].weather[0].description + '</p>');
-        $("#cardFour").append('<p>' + weatherData.daily[3].humidity + '</p>');
-        $("#cardFour").append('<p>' + weatherData.daily[3].wind_deg + '</p>');
-        $("#cardFour").append('<p>' + weatherData.daily[3].pressure + '</p>');
+        $('#cardFour').append("Description: " +'<p>' + '<strong>' + weatherData.daily[3].weather[0].description + '</strong>' + '</p>');
+        $("#cardFour").append('<p>' + 'Humidity: '  + '<strong>' + weatherData.daily[3].humidity + '</strong>' + '</p>');
+        $("#cardFour").append('<p>' + 'Wind: ' + '<strong>' + weatherData.daily[3].wind_deg + '</strong>' + '</p>');
+        $("#cardFour").append('<p>' + 'Pressure: ' + '<strong>' + weatherData.daily[3].pressure + '</strong>' + '</p>');
 
-        $("#cardFive").append('<p>' + weatherData.daily[4].dt + '</p>');
+        $("#cardFive").append('<p class="card-header">' + weatherData.daily[4].dt + '</p>'+ '<br>');
         $("#cardFive").append('<p>' + weatherData.daily[4].temp.max + ' / ' + weatherData.daily[4].temp.min + '</p>');
-        $('#cardFive').append('<p>' + weatherData.daily[4].weather[0].description + '</p>');
-        $("#cardFive").append('<p>' + weatherData.daily[4].humidity + '</p>');
-        $("#cardFive").append('<p>' + weatherData.daily[4].wind_deg + '</p>');
-        $("#cardFive").append('<p>' + weatherData.daily[4].pressure + '</p>');
+        $('#cardFive').append("Description: " +'<p>' + '<strong>' + weatherData.daily[4].weather[0].description + '</strong>' + '</p>');
+        $("#cardFive").append('<p>' + 'Humidity: '  + '<strong>' + weatherData.daily[4].humidity + '</strong>' + '</p>');
+        $("#cardFive").append('<p>' + 'Wind: '  + '<strong>' + weatherData.daily[4].wind_deg + '</strong>' + '</p>');
+        $("#cardFive").append('<p>' + 'Pressure: ' + '<strong>' + weatherData.daily[4].pressure + '</strong>' + '</p>');
 
 
 
-
-
-
+// fetch("http://api.openweathermap.org/data/2.5/onecall", {headers: {'Authorization': 'token 440cc6196dd546c7359e68b93b7d29fb'}})
+//     .then(response => {response.json().then(forecast => {
+//         console.log(forecast)
+//             })
+//         })
 
 
 
